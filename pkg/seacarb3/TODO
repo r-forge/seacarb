@@ -1,0 +1,13 @@
+= seacarb2 - TODO
+
+  * Rework bor, buffer, carb, pCa, pgas, pHinsitu, pmix, ppH and pTA
+  * pH conversion in swpH
+  * Kconv() does not give the same result as kconv() initial,
+    but I don't see where the problem is
+  * assign to subset "[<-.swobj", especially another swobj
+    (or do it object by object?)
+  * convert.swK() using Kconv()
+  * read.table / write.table => conversion
+  * check all functions for conversion (unit & pHscale)
+  * Calculation of the different ions in SW from stp (see bor() to rework)
+  
