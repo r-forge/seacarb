@@ -68,8 +68,8 @@ plot(SpC, log = "y")
 plot(SpC)
 # superpose curves using Roy et al., 1993 algorithm
 SpCR <- speciation(swconc(2.04, "CT", unit = "mmol/kg-soln", stp = stp()),
-	pH = swpH(seq(0, 14, 0.1), "T"), K1 = K1(stp(), version = "r"),
-	K2 = K2(stp(), version = "r"))
+	pH = swpH(seq(0, 14, 0.1), "T"), K1 = K1(stp(), k1k2 = "r"),
+	K2 = K2(stp(), k1k2 = "r"))
 plot(SpCR, col = "red", add = TRUE)
 legend("left", inset = 0.05, col = c("red", "black"), lty = 1, bg = "white",
 	legend = c("Roy et al., 1993", "Lueker et al., 2000"))
