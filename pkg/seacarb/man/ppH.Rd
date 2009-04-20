@@ -94,6 +94,10 @@ flag = 25     pCO2 and DIC given
 Jean-Pierre Gattuso \email{gattuso@obs-vlfr.fr}
 }
 
+\seealso{
+	\code{\link[seacarb]{buffer}}.
+}
+
 \examples{
 ppH(flag=24, sys=0, var1=384, var2=2302e-6, pCO2a=384, vol=-12e-3, N=0.01, S=34.3, T=16, P=0)
 
