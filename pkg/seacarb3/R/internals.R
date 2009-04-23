@@ -257,6 +257,20 @@
 	return(paste("_", res, sep = ""))
 }
 
+".knownSubst" <- c("H2O", "H", "OH", "Cl", "Br", "Na", "K", "Ca", "Mg", "Sr",
+	"CaCO3", "O2", "N2", "BT", "BOH4", "BOH3", "CT", "AT", "CO2", "HCO3", "CO3",
+	"FT", "F", "HF", "NT", "NHT", "NH3", "NH4", "NO2", "NO3", "PT", "PO4",
+	"HPO4", "H2PO4", "H3PO4", "SiT", "SiOOH3", "SiOH4", "ST", "SO4", "HSO4")
+
+".checkSubst" <- function (substance)
+{
+	# Check if a substance code exists in our list and warn for unknown item
+	substance <- as.character(substance[1])
+	if (!substance %in% .knownSubst)
+		warning("'", substance, "' is not a known substance code!")
+	return(substance)
+}
+
 ".specNames" <- function (label, unit = NULL)
 {
 	# Get short unit ID
